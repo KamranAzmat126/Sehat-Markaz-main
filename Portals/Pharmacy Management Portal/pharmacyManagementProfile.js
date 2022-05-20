@@ -18,6 +18,7 @@ import * as ImagePicker from "expo-image-picker";
 import * as Permissions from "expo-permissions";
 import { AntDesign } from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Feather from "react-native-vector-icons/Feather";
 //import * as ImagePicker from "expo-image-picker";
@@ -139,77 +140,11 @@ export default function PharmacyManagementProfile({ route }) {
           </View>
         </View>
       </View>
-      {/* <Avatar.Image source={kami} size={200} /> */}
-      {/* <View
-        style={{
-          flexDirection: "row-reverse",
-          marginVertical: 20,
-          marginLeft: 80,
-        }}
-      >
-        <TouchableOpacity onPress={() => setEdit(!edit)}>
-          <Entypo name="edit" size={20} color="gray" style={{ marginTop: 8 }} />
-        </TouchableOpacity>
-        <TextInput
-          style={styles.name}
-          editable={edit ? true : false}
-          name="name"
-          value={name}
-          onChangeText={(name) => setName(name)}
-        ></TextInput>
-      </View> */}
-
-      {/* <View style={styles.details}>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.keys}>Address: </Text>
-          <TextInput
-            style={styles.values}
-            name="address"
-            value={address}
-            onChangeText={(address) => setAddress(address)}
-          ></TextInput>
-        </View>
-
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.keys}>Contact: </Text>
-          <TextInput
-            style={styles.values}
-            name="contact"
-            value={contact}
-            onChangeText={(contact) => setContact(contact)}
-          ></TextInput>
-        </View>
-      </View>
-
-      <View style={{ alignItems: "center" }}>
-        <TouchableOpacity
-          style={styles.btn}
-          onPress={() => {
-            onPresHandler();
-            alert("Profile Data Updated");
-          }}
-        >
-          <Text style={styles.updateBtn}>Save</Text>
-        </TouchableOpacity> */}
       <View style={styles.main}>
         <View style={styles.action}>
-          <FontAwesome name="user-o" color={colors.text} size={26} />
+          <FontAwesome5 name="clinic-medical" color={colors.text} size={26} />
           <TextInput
-            placeholder="First Name"
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-            style={[
-              styles.textInput,
-              {
-                color: colors.text,
-              },
-            ]}
-          />
-        </View>
-        <View style={styles.action}>
-          <FontAwesome name="user-o" color={colors.text} size={26} />
-          <TextInput
-            placeholder="Last Name"
+            placeholder="Name"
             placeholderTextColor="#666666"
             autoCorrect={false}
             style={[
@@ -251,23 +186,9 @@ export default function PharmacyManagementProfile({ route }) {
           />
         </View>
         <View style={styles.action}>
-          <FontAwesome name="globe" color={colors.text} size={26} />
-          <TextInput
-            placeholder="Country"
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-            style={[
-              styles.textInput,
-              {
-                color: colors.text,
-              },
-            ]}
-          />
-        </View>
-        <View style={styles.action}>
           <Icon name="map-marker-outline" color={colors.text} size={26} />
           <TextInput
-            placeholder="City"
+            placeholder="Address"
             placeholderTextColor="#666666"
             autoCorrect={false}
             style={[
@@ -294,7 +215,8 @@ export default function PharmacyManagementProfile({ route }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 10,
+    // marginHorizontal: 10,
+    backgroundColor: '#ffff'
   },
   uploadImageContainer: {
     marginTop: '5%',
@@ -324,52 +246,6 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     overflow: "hidden",
   },
-  // name: {
-  //   fontSize: 24,
-  //   fontWeight: "bold",
-  //   color: "#26241e",
-  //   marginRight: 20,
-  // },
-  // details: {
-  //   borderTopWidth: 0.3,
-  //   // borderBottomEndRadius: 10,
-  //   // // borderBottomRightRadius: 100,
-  //   // borderBottomStartRadius: 100,
-  // },
-  // keys: {
-  //   fontSize: 16,
-  //   fontWeight: "bold",
-  //   color: "#26241e",
-  //   marginTop: "7%",
-  //   width: "30%",
-  // },
-  // values: {
-  //   fontSize: 14,
-  //   color: "#6e6464",
-  //   marginTop: "5%",
-  //   width: "65%",
-  //   borderWidth: 1,
-  //   borderRadius: 5,
-  //   padding: 4,
-  // },
-  // click: {
-  //   fontSize: 14,
-  //   color: "#6e6464",
-  //   borderBottomWidth: 0.5,
-  // },
-  // btn: {
-  //   alignItems: "center",
-  //   height: 100,
-  //   marginTop: "10%",
-  // },
-  // updateBtn: {
-  //   padding: 10,
-  //   paddingHorizontal: 30,
-  //   alignItems: "center",
-  //   fontSize: 16,
-  //   borderRadius: 15,
-  //   backgroundColor: "darkgray",
-  // },
   main: {
     marginTop: 5,
     padding: 15,
@@ -380,55 +256,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#43ba63",
     alignItems: "center",
     marginTop: 10,
-  },
-  panel: {
-    padding: 20,
-    backgroundColor: "#FFFFFF",
-    paddingTop: 20,
-    // borderTopLeftRadius: 20,
-    // borderTopRightRadius: 20,
-    // shadowColor: '#000000',
-    // shadowOffset: {width: 0, height: 0},
-    // shadowRadius: 5,
-    // shadowOpacity: 0.4,
-  },
-  header: {
-    backgroundColor: "#FFFFFF",
-    shadowColor: "#333333",
-    shadowOffset: { width: -1, height: -3 },
-    shadowRadius: 2,
-    shadowOpacity: 0.4,
-    // elevation: 5,
-    paddingTop: 20,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
-  panelHeader: {
-    alignItems: "center",
-  },
-  panelHandle: {
-    width: 40,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: "#00000040",
-    marginBottom: 10,
-  },
-  panelTitle: {
-    fontSize: 27,
-    height: 35,
-  },
-  panelSubtitle: {
-    fontSize: 14,
-    color: "gray",
-    height: 30,
-    marginBottom: 10,
-  },
-  panelButton: {
-    padding: 13,
-    borderRadius: 10,
-    backgroundColor: "#FF6347",
-    alignItems: "center",
-    marginVertical: 7,
   },
   panelButtonTitle: {
     fontSize: 17,

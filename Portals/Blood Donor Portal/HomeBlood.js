@@ -31,14 +31,14 @@ const HomeBlood = ({ navigation }) => {
           style={{
             height: 10,
             width: 20,
-            marginTop: 50,
+            marginTop: 25,
           }}
         />
         <View
           style={{
             flexDirection: "row",
             alignItems: "center",
-            marginTop: 25,
+            marginTop: 5,
             width: "100%",
           }}
         >
@@ -63,10 +63,10 @@ const HomeBlood = ({ navigation }) => {
             </Text>
           </View>
           <View style={{ width: "50%", alignItems: "flex-end" }}>
-            <Image
-              source={require("../assets/sehat-markaz.png")}
-              style={{ height: 80, width: 80 }}
-            />
+          <Image
+              source={require('../assets/sehatblacklog.png')}
+              style={{height:80,width:80}}
+          />
           </View>
         </View>
       </View>
@@ -79,73 +79,10 @@ const HomeBlood = ({ navigation }) => {
           marginTop: -45,
         }}
       >
-        {/* <View style={{
-                   backgroundColor:"#FFF",
-                   paddingVertical:8,
-                   paddingHorizontal:20,
-                   marginHorizontal:20,
-                   borderRadius:15,
-                   marginTop:25,
-                   flexDirection:"row",
-                   alignItems:"center"
-               }}>
-                   <TextInput
-                        placeholder="Search"
-                        placeholderTextColor="#b1e5d3"
-                        style={{
-                            fontWeight:"bold",
-                            fontSize:18,
-                            width:260
-                        }}
-                   />
-                   <Image
-                   // source={require('../images/3.png')}
-                    style={{height:20,width:20}}
-                   />
-               </View> */}
       </LinearGradient>
 
-      {/* <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center"
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61"
-                        }}>Recommended</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:"#b1e5d3",
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <View style={{
-                            backgroundColor:"#00a46c",
-                            paddingHorizontal:20,
-                            paddingVertical:5,
-                            borderRadius:15
-                        }}>
-                            <Text style={{
-                                fontWeight:"bold",
-                                fontSize:13,
-                                color:"#FFF"
-                            }}>More</Text>
-                        </View>
-                   </View>
-               </View> */}
 
       <ScrollView
-        // horizontal
-        // showsHorizontalScrollIndicator={false}
         style={{ height: 400 }}
       >
         <LinearGradient
@@ -161,7 +98,7 @@ const HomeBlood = ({ navigation }) => {
         />
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Detail")}
+            // onPress={() => navigation.navigate("Detail")}
             style={{
               height: 150,
               elevation: 2,
@@ -176,10 +113,6 @@ const HomeBlood = ({ navigation }) => {
             }}
           >
             <Icon name="user-md" size={70} color="#eb3838" />
-            {/*<FontAwesomeIcon icon="fa-solid fa-user-doctor" />
-                         <Image
-                           source={require('../images/4.png')}
-                        /> */}
             <View
               style={{
                 flexDirection: "row",
@@ -195,20 +128,7 @@ const HomeBlood = ({ navigation }) => {
               >
                 Profile
               </Text>
-              {/* <Text style={{
-                                fontWeight:"bold",
-                                color:"#00a46c",
-                                paddingLeft:35
-                            }}>$400</Text> */}
             </View>
-            {/* <Text style={{
-                            paddingHorizontal:10,
-                            fontWeight:"bold",
-                            color:"#b1e5d3",
-                            paddingTop:3
-                        }}>
-                            RUSSIA
-                        </Text> */}
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -227,9 +147,6 @@ const HomeBlood = ({ navigation }) => {
             }}
           >
             <Icon name="bell-o" size={70} color="#eb3838" />
-            {/* <Image
-                            source={require('../images/5.png')}
-                        /> */}
             <View
               style={{
                 flexDirection: "row",
@@ -244,26 +161,13 @@ const HomeBlood = ({ navigation }) => {
               >
                 Notification
               </Text>
-              {/* <Text style={{
-                                fontWeight:"bold",
-                                color:"#00a46c",
-                                paddingLeft:45
-                            }}>$400</Text> */}
             </View>
-            {/* <Text style={{
-                            paddingHorizontal:10,
-                            fontWeight:"bold",
-                            color:"#b1e5d3",
-                            paddingTop:3
-                        }}>
-                            RUSSIA
-                        </Text> */}
           </TouchableOpacity>
         </View>
 
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Detail")}
+            // onPress={() => navigation.navigate("Detail")}
             style={{
               height: 150,
               elevation: 2,
@@ -278,10 +182,6 @@ const HomeBlood = ({ navigation }) => {
             }}
           >
             <MIcon name="android-messages" size={70} color="#eb3838" />
-            {/*   <FontAwesomeIcon icon="fa-regular fa-messages" />
-                         <Image
-                            source={require('../images/4.png')}
-                        /> */}
             <View
               style={{
                 flexDirection: "row",
@@ -296,23 +196,10 @@ const HomeBlood = ({ navigation }) => {
               >
                 Messages
               </Text>
-              {/* <Text style={{
-                                fontWeight:"bold",
-                                color:"#00a46c",
-                                paddingLeft:35
-                            }}>$400</Text> */}
             </View>
-            {/* <Text style={{
-                            paddingHorizontal:10,
-                            fontWeight:"bold",
-                            color:"#b1e5d3",
-                            paddingTop:3
-                        }}>
-                            RUSSIA
-                        </Text> */}
           </TouchableOpacity>
 
-          <View
+          <TouchableOpacity
             // onPress={()=>navigation.navigate("Detail")}
             style={{
               height: 150,
@@ -328,10 +215,6 @@ const HomeBlood = ({ navigation }) => {
             }}
           >
             <MIcon name="logout" size={70} color="#eb3838" />
-            {/*<FontAwesomeIcon icon="fa-regular fa-right-from-bracket" />
-                         <Image
-                            source={require('../images/5.png')}
-                        /> */}
             <View
               style={{
                 flexDirection: "row",
@@ -346,78 +229,10 @@ const HomeBlood = ({ navigation }) => {
               >
                 Logout
               </Text>
-              {/* <Text style={{
-                                fontWeight:"bold",
-                                color:"#00a46c",
-                                paddingLeft:45
-                            }}>$400</Text> */}
             </View>
-            {/* <Text style={{
-                            paddingHorizontal:10,
-                            fontWeight:"bold",
-                            color:"#b1e5d3",
-                            paddingTop:3
-                        }}>
-                            RUSSIA
-                        </Text> */}
-          </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-
-      {/* 
-
-               <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center",
-                   marginTop:-80,
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61"
-                        }}>Featured Plants</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:"#b1e5d3",
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <View style={{
-                            backgroundColor:"#00a46c",
-                            paddingHorizontal:20,
-                            paddingVertical:5,
-                            borderRadius:15
-                        }}>
-                            <Text style={{
-                                fontWeight:"bold",
-                                fontSize:13,
-                                color:"#FFF"
-                            }}>More</Text>
-                        </View>
-                   </View>
-               </View>
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={{marginBottom:-100}}
-                >
-                    <Image
-                        //source={require("../images/18.png")}
-                        style={{marginTop:20,marginHorizontal:20}}
-                    />
-                     <Image
-                        //source={require("../images/19.png")}
-                        style={{marginTop:20,borderRadius:10}}
-                    />
-                </ScrollView> */}
     </View>
   );
 };

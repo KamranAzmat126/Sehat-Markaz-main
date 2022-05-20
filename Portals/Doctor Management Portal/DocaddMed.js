@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {ScrollView, View, StyleSheet, TouchableOpacity,Alert, Modal, Image, StatusBar } from 'react-native';
 import { Text } from 'react-native-paper';
 import Button from '../../src/screens/components/Button';
-import TextInputR from '../../src/screens/components/TextInputR';
+import TextInput from '../../src/screens/components/TextInput';
 import { theme } from '../../src/screens/core/theme';
 import {emptyfield } from '../../src/screens/helpers/emptyfield';
 import * as ImagePicker from 'expo-image-picker';
@@ -95,7 +95,7 @@ const DocaddMed = ( {navigation}) => {
       <View style= {styles.headcon}>
       <Text style = {{color: '#18b4f5', fontSize:22,fontWeight: 'bold'}}>Add Medicine</Text>
 
-      <TextInputR
+      <TextInput
         label="Name"
         returnKeyType="next"
         value={name.value}
@@ -104,7 +104,7 @@ const DocaddMed = ( {navigation}) => {
         errorText={name.error}
         
       />
-      <TextInputR
+      <TextInput
         label="Company"
         returnKeyType="next"
         value={email.value}
@@ -112,7 +112,7 @@ const DocaddMed = ( {navigation}) => {
         error={!!email.error}
         errorText={email.error}
       />
-      <TextInputR
+      <TextInput
         label="Country"
         returnKeyType="next"
         value={phone.value}
@@ -120,7 +120,7 @@ const DocaddMed = ( {navigation}) => {
         error={!!phone.error}
         errorText={phone.error}
       />
-      <TextInputR
+      <TextInput
         label="Weightage"
         returnKeyType="next"
         value={empty.value}
@@ -136,7 +136,7 @@ const DocaddMed = ( {navigation}) => {
                     value="tablet"
                     color= '#18b4f5'
                     status={ checked === 'tablet' ? 'checked' : 'unchecked' }
-                    onPress={() => setChecked('male')}
+                    onPress={() => setChecked('tablet')}
                 />
                 <Text style = {styles.ratxt}> Tablet</Text>
                 <RadioButton
@@ -222,6 +222,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
+    backgroundColor: '#ffff'
     },
   head: {
     flex: 1,
@@ -231,7 +232,7 @@ const styles = StyleSheet.create({
   },
   headcon: {
     alignItems: 'center',
-    marginTop: 25
+    marginTop: 50
   },
   row: {
     flexDirection: 'row',

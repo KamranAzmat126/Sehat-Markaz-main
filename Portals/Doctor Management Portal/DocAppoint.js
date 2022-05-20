@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
   cons: {
     backgroundColor: '#18b4f5',
     width: '35%',
-    // flexDirection: 'row',
     justifyContent: 'center',
     alignSelf: 'center',
     borderRadius: 10,

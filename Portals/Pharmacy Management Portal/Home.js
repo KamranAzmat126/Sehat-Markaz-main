@@ -25,7 +25,7 @@ const Home = ({navigation}) => {
                     style={{
                         height:10,
                         width:20,
-                        marginTop:25
+                        marginTop:50
                     }}
                />
                <View style={{
@@ -62,9 +62,6 @@ const Home = ({navigation}) => {
             
         
                 <ScrollView 
-                    // horizontal
-                    // showsHorizontalScrollIndicator={false}
-                    
                     style={{height:400}}
                 >
                     <LinearGradient
@@ -107,7 +104,7 @@ const Home = ({navigation}) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity 
-                        onPress={()=>navigation.navigate("Pe")}
+                        // onPress={()=>navigation.navigate("Pe")}
                         style={{
                             height:150,
                             elevation:2,
@@ -149,7 +146,6 @@ const Home = ({navigation}) => {
                         }}
                     >
                         <Fontisto name="pills" size= {70} color= '#43ba63' />
-                        {/* <MIcon name="android-messages" size= {70} color= '#43ba63'  /> */}
                         <View style={{
                             flexDirection:"row",
                             paddingTop:10,
@@ -161,7 +157,7 @@ const Home = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
 
-                    <View 
+                    <TouchableOpacity 
                         // onPress={()=>navigation.navigate("Detail")}
                         style={{
                             height:150,
@@ -185,11 +181,11 @@ const Home = ({navigation}) => {
                                 fontWeight:"bold"
                             }}>Orders</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style = {{flexDirection: 'row',justifyContent:'space-evenly'}}>
-                    {/* <TouchableOpacity 
-                        onPress={()=>navigation.navigate("ViewMed")}
+                    <TouchableOpacity 
+                        // onPress={()=>navigation.navigate("ViewMed")}
                         style={{
                             height:150,
                             elevation:2,
@@ -202,8 +198,7 @@ const Home = ({navigation}) => {
                             width:160
                         }}
                     >
-                        <Fontisto name="pills" size= {70} color= '#43ba63' />
-                        {/* <MIcon name="android-messages" size= {70} color= '#43ba63'  /> 
+                         <MIcon name="android-messages" size= {70} color= '#43ba63'  /> 
                         <View style={{
                             flexDirection:"row",
                             paddingTop:10,
@@ -211,11 +206,11 @@ const Home = ({navigation}) => {
                         }}>
                             <Text style={{
                                 fontWeight:"bold"
-                            }}>Medicine</Text>
+                            }}>Messages</Text>
                         </View>
-                    </TouchableOpacity> */}
+                    </TouchableOpacity>
 
-                    <View 
+                    <TouchableOpacity 
                         // onPress={()=>navigation.navigate("Detail")}
                         style={{
                             height:150,
@@ -239,66 +234,10 @@ const Home = ({navigation}) => {
                                 fontWeight:"bold"
                             }}>Logout</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
                 </ScrollView>            
-
-                
-{/* 
-
-               <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center",
-                   marginTop:-80,
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61"
-                        }}>Featured Plants</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:"#b1e5d3",
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <View style={{
-                            backgroundColor:"#00a46c",
-                            paddingHorizontal:20,
-                            paddingVertical:5,
-                            borderRadius:15
-                        }}>
-                            <Text style={{
-                                fontWeight:"bold",
-                                fontSize:13,
-                                color:"#FFF"
-                            }}>More</Text>
-                        </View>
-                   </View>
-               </View>
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={{marginBottom:-100}}
-                >
-                    <Image
-                        //source={require("../images/18.png")}
-                        style={{marginTop:20,marginHorizontal:20}}
-                    />
-                     <Image
-                        //source={require("../images/19.png")}
-                        style={{marginTop:20,borderRadius:10}}
-                    />
-                </ScrollView> */}
         </View>
     )
 }

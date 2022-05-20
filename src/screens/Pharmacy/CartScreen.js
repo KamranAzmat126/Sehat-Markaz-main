@@ -152,6 +152,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginHorizontal: 20,
+    marginTop: 25
   },
   cartCard: {
     height: 100,

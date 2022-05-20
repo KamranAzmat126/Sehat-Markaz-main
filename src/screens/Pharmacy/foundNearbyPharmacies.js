@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     width: "100%",
+    marginTop: 35
   },
   txt: {
     margin: 20,

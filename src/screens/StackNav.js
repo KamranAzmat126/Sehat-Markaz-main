@@ -64,6 +64,7 @@ import ProfileScreen from "../../Portals/Pharmacy Management Portal/Profilephar"
 import ViewMed from "../../Portals/Pharmacy Management Portal/ViewMed";
 import AddMed from "../../Portals/Pharmacy Management Portal/addMed";
 import PharMedDetail from "../../Portals/Pharmacy Management Portal/PharMedDetail";
+import UpdateMed from "../../Portals/Pharmacy Management Portal/UpdateMed";
 
 //For Blood Donor Portal
 import StartBloodDonorPortal from "../../Portals/Blood Donor Portal/start";
@@ -74,11 +75,14 @@ import HomeBlood from "../../Portals/Blood Donor Portal/HomeBlood";
 import StartLabManagementPortal from "../../Portals/Lab Management Portal/start";
 import LabManagementProfile from "../../Portals/Lab Management Portal/labManagementProfile";
 import HomeLab from "../../Portals/Lab Management Portal/HomeLab";
+import LabProfile from "../../Portals/Lab Management Portal/LabProfile";
+import EditLabProfile from "../../Portals/Lab Management Portal/EditLabProfile";
 
 //For Ambulance Management Portal
 import StartAmbulanceServiceProvider from "../../Portals/Ambulance Service Provider Portal/start";
 import AmbulanceServiceProviderProfile from "../../Portals/Ambulance Service Provider Portal/ambServiceProviderProfile";
 import HomeAmb from "../../Portals/Ambulance Service Provider Portal/HomeAmb";
+import AmbuProfile from "../../Portals/Ambulance Service Provider Portal/AmbuProfile";
 
 import GeocodingScreen from "./Location";
 import CurrentLocation from "./CurrentLocation";
@@ -89,9 +93,9 @@ import HomeDoc from "../../Portals/Doctor Management Portal/HomeDoc";
 import DocViewMed from "../../Portals/Doctor Management Portal/DocViewMed";
 import DocaddMed from "../../Portals/Doctor Management Portal/DocaddMed";
 import DocAppoint from "../../Portals/Doctor Management Portal/DocAppoint";
-
-
-
+import DocProfilePanel from "../../Portals/Doctor Management Portal/DocProfilePanel";
+import EditDocProfile from "../../Portals/Doctor Management Portal/EditDocProfile";
+import PatientProfile from "./PatientProfile";
 
 
 
@@ -411,44 +415,12 @@ const StackNav = ({ navigation }) => {
             headerShown: true,
           }}
         />
+        <Stack.Screen
+              name="PatientProfile"
+              component={PatientProfile}
+              options={{ headerShown: false }}
+            />
           </Stack.Group>
-          {/* <Stack.Group screenOptions={{ presentation: 'modal' }}>
-           <Stack.Screen name="NotificationsTab" component={NotificationsTab} options={{
-                    headerStyle: {
-                        backgroundColor: '#00adb4',
-                    },
-                    headerTintColor: '#fff',
-                    headerTitleAlign: 'center',
-                    headerTitleStyle: {
-                        fontWeight: 'bold',
-                    }, title: 'Notifications'
-                }} />
-            </Stack.Group> */}
-
-          {/* <Stack.Group>
-            <Stack.Screen
-              name="StartPharmacyManagementPortal"
-              component={StartPharmacyManagementPortal}
-              options={{ headerShown: false }}
-            />
-
-            <Stack.Screen
-              name="EditProfile"
-              component={PharmacyManagementProfile}
-              options={{ headerShown: true }}
-            />
-            <Stack.Screen
-              name="Home"
-              component={Home}
-              options={{ headerShown: false }}
-            /> 
-          
-            <Stack.Screen
-              name="Profile"
-              component={ProfileScreen}
-              options={{ headerShown: true }}
-            /> 
-          </Stack.Group> */}
 
           <Stack.Group>
             <Stack.Screen
@@ -486,6 +458,11 @@ const StackNav = ({ navigation }) => {
             <Stack.Screen
               name="PharMedDetail"
               component={PharMedDetail}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="UpdateMed"
+              component={UpdateMed}
               options={{ headerShown: false }}
             />
           </Stack.Group>
@@ -526,6 +503,16 @@ const StackNav = ({ navigation }) => {
               component={HomeLab}
               options={{ headerShown: false }}
             />
+            <Stack.Screen
+              name="LabProfile"
+              component={LabProfile}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="EditLabProfile"
+              component={EditLabProfile}
+              options={{ headerShown: false }}
+            />
           </Stack.Group>
 
           <Stack.Group>
@@ -543,6 +530,11 @@ const StackNav = ({ navigation }) => {
             <Stack.Screen
               name="HomeAmbulance"
               component={HomeAmb}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AmbuProfile"
+              component={AmbuProfile}
               options={{ headerShown: false }}
             />
           </Stack.Group>
@@ -569,6 +561,16 @@ const StackNav = ({ navigation }) => {
                 title: 'Appointments',
                 headerShown: true,
               }}
+            />
+            <Stack.Screen
+              name="DocProfilePanel"
+              component={DocProfilePanel}
+              options={{ headerShown: true }}
+            />
+            <Stack.Screen
+              name="EditDocProfile"
+              component={EditDocProfile}
+              options={{ headerShown: true }}
             />
           </Stack.Group>
         </Stack.Navigator>

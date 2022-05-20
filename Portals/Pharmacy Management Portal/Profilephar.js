@@ -3,16 +3,11 @@ import {View, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
 import {
   Avatar,
   Title,
-  Caption,
   Text,
-  TouchableRipple,
 } from 'react-native-paper';
 import { LinearGradient } from 'expo-linear-gradient'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
-//import Share from 'react-native-share';
-
-//import files from '../assets/filesBase64';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const ProfileScreen = ({navigation}) => {
 
@@ -48,18 +43,17 @@ const ProfileScreen = ({navigation}) => {
               marginTop:15,
               marginBottom: 5,
             }]}>M Kamran Azmat</Title>
-            {/* <Caption style={styles.caption}>@j_doe</Caption> */}
           </View>
         </View>
-        {/* <View>
-        <TouchableOpacity style={styles.commandButton} 
-          onPress={()=>navigation.navigate("EditProfile")}>
-          <Text style={styles.panelButtonTitle}>Edit Profile</Text>
-        </TouchableOpacity>
-        </View> */}
       </View>
 
       <View style={styles.userInfoSection}>
+      <View style={styles.row}>
+        <View style={styles.categoryIcon}>
+          <FontAwesome5 name="building" color="#43ba63" size={28}/>
+          </View>
+          <Text style={styles.userText}>Talwar Group</Text>
+        </View>
         <View style={styles.row}>
         <View style={styles.categoryIcon}>
           <Icon name="map-marker-radius" color="#43ba63" size={28}/>
@@ -70,13 +64,13 @@ const ProfileScreen = ({navigation}) => {
         <View style={styles.categoryIcon}>
           <Icon name="phone" color="#43ba63" size={28}/>
           </View>
-          <Text style={styles.userText}>+91-900000009</Text>
+          <Text style={styles.userText}>03125219040</Text>
         </View>
         <View style={styles.row}>
         <View style={styles.categoryIcon}>
           <Icon name="email" color="#43ba63" size={28}/>
           </View>
-          <Text style={styles.userText}>john_doe@email.com</Text>
+          <Text style={styles.userText}>kamranazmat926@email.com</Text>
         </View>
         <View>
         <TouchableOpacity style={styles.commandButton} 

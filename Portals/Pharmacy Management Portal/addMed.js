@@ -13,14 +13,13 @@ import {Picker} from '@react-native-picker/picker';
 import { RadioButton } from 'react-native-paper';
 
 const AddMed = ( {navigation}) => {
- const [name, setName] = useState({ value: '', error: '' });
-  const [email, setEmail] = useState({ value: '', error: '' });
-  const [password, setPassword] = useState({ value: '', error: '' });
-  const [empty, setEmpty] = useState({ value: '', error: '' });
-  const [phone, setPhone] = useState({ value: '', error: '' });
+  const [name, setName] = useState({ value: '', error: '' });
+  const [company, setCompany] = useState({ value: '', error: '' });
+  const [country, setCountry] = useState({ value: '', error: '' });
+  const [weig, setWeig] = useState({ value: '', error: '' });
   const [image, setImage] = useState();
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectedValue, setSelectedValue] = useState("");
+  // const [selectedValue, setSelectedValue] = useState("");
   const [checked, setChecked] = React.useState('tablet');
 
   const DropdownT = () => {
@@ -51,33 +50,22 @@ const AddMed = ( {navigation}) => {
 
   const _onSignUpPressed = () => {
     const nameError = emptyfield(name.value);
-    const emailError = emptyfield(email.value);
-    const passwordError = emptyfield(password.value);
-    const emptyError = emptyfield(empty.value);
-    const phoneError = emptyfield(phone.value); 
+    const companyError = emptyfield(company.value);
+    const countryError = emptyfield(country.value);
+    const weigError = emptyfield(weig.value);
+ //   const phoneError = emptyfield(phone.value); 
 
-    if (emailError || passwordError || nameError || emptyError||phoneError) {
+    if (companyError || countryError || nameError || weigError) {
       setName({ ...name, error: nameError });
-      setEmail({ ...email, error: emailError });
-      setPassword({ ...password, error: passwordError });
-      setEmpty({ ...empty, error: emptyError });
-      setPhone({ ...empty, error: phoneError });
+      setCompany({ ...company, error: companyError });
+      setCountry({ ...country, error: countryError });
+      setWeig({ ...weig, error: weigError });
+//      setPhone({ ...empty, error: phoneError });
       return;
     }
 
     navigation.navigate('');
   };
-
-  // const _onSignUpPressed = () => {
-  //  try {
-  //     if (email.value !== '' && password.value !== '') {
-  //         auth.createUserWithEmailAndPassword(email.value, password.value); 
-  //         navigation.replace('LoginScreen', {otherParam: String})
-  //     }
-  //   } catch (error) {
-  //       alert(error.message)
-  //   }
-  // };
 
   const pickfromGallery = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -116,8 +104,6 @@ const AddMed = ( {navigation}) => {
 
   return (
     <View style= {styles.container}>
-      {/* <StatusBar backgroundColor="skyblue" translucent={true}/> */}
-      {/* <Logo /> */}
       <ScrollView style= {styles.head}
       showsVerticalScrollIndicator={false}>
       <View style= {styles.headcon}>
@@ -135,29 +121,29 @@ const AddMed = ( {navigation}) => {
       <TextInputR
         label="Company"
         returnKeyType="next"
-        value={email.value}
-        onChangeText={text => setEmail({ value: text, error: '' })}
-        error={!!email.error}
-        errorText={email.error}
+        value={company.value}
+        onChangeText={text => setCompany({ value: text, error: '' })}
+        error={!!company.error}
+        errorText={company.error}
       />
       <TextInputR
         label="Country"
         returnKeyType="next"
-        value={phone.value}
-        onChangeText={text => setPhone({ value: text, error: '' })}
-        error={!!phone.error}
-        errorText={phone.error}
+        value={country.value}
+        onChangeText={text => setCountry({ value: text, error: '' })}
+        error={!!country.error}
+        errorText={country.error}
       />
       <TextInputR
         label="Weightage"
         returnKeyType="next"
-        value={empty.value}
-        onChangeText={text => setEmpty({ value: text, error: '' })}
-        error={!!empty.error}
-        errorText={empty.error}
+        value={weig.value}
+        onChangeText={text => setWeig({ value: text, error: '' })}
+        error={!!weig.error}
+        errorText={weig.error}
       />
-
-      <DropdownT/>
+{/* 
+      <DropdownT/> */}
       <View style = {{marginRight:75}}>
             <Text style = {styles.txt}> Medicine Type</Text>
             <View style = {{flexDirection: 'row'}}>
@@ -226,20 +212,12 @@ const AddMed = ( {navigation}) => {
           </View>
         
         </Modal>
-        
-      {/* <View style={styles.row}>
-        <Text>Already have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.goBack('LoginScreen')}>
-          <Text style={styles.link}>Login</Text>
-        </TouchableOpacity>
-      </View> */}
       </View>
 
       </ScrollView>
       <View style={{position: 'relative', left: 0, right: 0, bottom: 0}}>
                 <TouchableOpacity style= {styles.cons} mode="contained" 
                     onPress={_onSignUpPressed }>
-                    {/* <FontAwesome name='calendar' color="#ffff" style= {styles.icon} size={22} /> */}
                     <Text style={styles.btnTxt}> Add</Text>
                 </TouchableOpacity>
         </View>
@@ -260,7 +238,7 @@ const styles = StyleSheet.create({
   },
   headcon: {
     alignItems: 'center',
-    marginTop: 25
+    marginTop: 50
   },
   row: {
     flexDirection: 'row',

@@ -37,22 +37,6 @@ const PharMedDetail = ({navigation, route}) => {
 
       <View style={style.header}>
         <Icon name="arrow-back" size={28} onPress={() => navigation.goBack()} />
-        {/* <TouchableOpacity style={{ flexDirection: "row" }}
-         onPress={() => navigation.navigate('CartScreen')}>
-          <Icon name="shopping-cart" size={28} />
-          <View
-            style={{
-              flexDirection: "column",
-              backgroundColor: "#57D4EB",
-              borderRadius:30,
-              height: 15,
-              width:15,
-              alignItems:'center',
-            }}
-          >
-            <Text style={{ color: "black", fontSize: 12 }}>{total}</Text>
-          </View>
-        </TouchableOpacity> */}
       </View>
       <ScrollView>
       <View style={style.imageContainer}>
@@ -113,23 +97,21 @@ const PharMedDetail = ({navigation, route}) => {
             }}>
             {med.about}
           </Text>
-          {/* <View
+          <View
             style={{
               marginTop: 20,
               flexDirection: 'row',
               alignSelf: 'center',
               marginBottom:15
             }}>
-            <TouchableOpacity onPress={() => {
-                dispatch(addToCart(med));
-              }}
+            <TouchableOpacity onPress={() => {navigation.navigate('UpdateMed');}}
                style={style.buyBtn}>
               <Text
                 style={{color: 'white', fontSize: 18, fontWeight: 'bold'}}>
-                Add to Cart
+                Update 
               </Text>
             </TouchableOpacity>
-          </View> */}
+          </View>
         </View>
       </View>
       </ScrollView>
@@ -140,7 +122,7 @@ const PharMedDetail = ({navigation, route}) => {
 const style = StyleSheet.create({
   header: {
     paddingHorizontal: 20,
-    marginTop: 20,
+    marginTop: 40,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -157,7 +139,6 @@ const style = StyleSheet.create({
     marginHorizontal: 7,
     marginBottom: 7,
     height: '50%',
-    //borderRadius: 20,
     borderTopLeftRadius:20,
     borderTopRightRadius: 20,
     marginTop: 30,
@@ -167,8 +148,6 @@ const style = StyleSheet.create({
     width: 25,
     height: 2,
     backgroundColor: 'black',
-    // marginBottom: 5,
-    // marginRight: 3,
   },
   borderBtn: {
     borderColor: 'grey',

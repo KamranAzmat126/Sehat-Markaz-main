@@ -108,7 +108,7 @@ export default function FoundNearbyAmbulances({ navigation, route }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: "7%",
+    marginTop: "8%",
     flex: 1,
   },
   head: {

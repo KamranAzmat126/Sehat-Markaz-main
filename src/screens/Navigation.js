@@ -11,6 +11,7 @@ import { Dashboard, NotificationsTab } from "./User";
 import MyAppoint from './myappoint';
 //import PharmacyManagementProfile from "../../Portals/Pharmacy Management Portal/pharmacyManagementProfile";
 import ProfileScreen from "../../Portals/Pharmacy Management Portal/Profilephar";
+import PatientProfile from "./PatientProfile";
 
 
 const Tab = createBottomTabNavigator();
@@ -109,7 +110,7 @@ const MyTabs = ({ navigation }) => {
       /> */}
         <Tab.Screen
           name="Profile"
-          component={ProfileScreen}
+          component={PatientProfile}
           options={{
             tabBarLabel: "Profile",
             headerTitleAlign: "center",

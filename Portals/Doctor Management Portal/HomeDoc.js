@@ -25,7 +25,7 @@ const HomeDoc = ({navigation}) => {
                     style={{
                         height:10,
                         width:20,
-                        marginTop:25
+                        marginTop:50
                     }}
                />
                <View style={{
@@ -75,9 +75,6 @@ const HomeDoc = ({navigation}) => {
             
         
                 <ScrollView 
-                    // horizontal
-                    // showsHorizontalScrollIndicator={false}
-                    
                     style={{height:400}}
                 >
                     <LinearGradient
@@ -104,7 +101,7 @@ const HomeDoc = ({navigation}) => {
                         marginBottom:10,
                         width:160
                     }}
-                    onPress={()=>navigation.navigate("")}
+                    // onPress={()=>navigation.navigate("")}
                     >
                         <Icon name="calendar" size= {70} color= '#18b4f5' />
                         <View style={{
@@ -174,7 +171,7 @@ const HomeDoc = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
 
-                    <View 
+                    <TouchableOpacity 
                         // onPress={()=>navigation.navigate("Detail")}
                         style={{
                             height:150,
@@ -198,11 +195,11 @@ const HomeDoc = ({navigation}) => {
                                 fontWeight:"bold"
                             }}>Prescription</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style = {{flexDirection: 'row',justifyContent:'space-evenly'}}>
-                    {/* <TouchableOpacity 
-                        onPress={()=>navigation.navigate("ViewMed")}
+                     <TouchableOpacity 
+                        onPress={()=>navigation.navigate("DocProfilePanel")}
                         style={{
                             height:150,
                             elevation:2,
@@ -215,8 +212,7 @@ const HomeDoc = ({navigation}) => {
                             width:160
                         }}
                     >
-                        <Fontisto name="pills" size= {70} color= '#43ba63' />
-                        {/* <MIcon name="android-messages" size= {70} color= '#43ba63'  /> 
+                        <Icon name="user-md" size={70} color="#18b4f5" />
                         <View style={{
                             flexDirection:"row",
                             paddingTop:10,
@@ -224,11 +220,64 @@ const HomeDoc = ({navigation}) => {
                         }}>
                             <Text style={{
                                 fontWeight:"bold"
-                            }}>Medicine</Text>
+                            }}>Profile</Text>
                         </View>
-                    </TouchableOpacity> */}
+                    </TouchableOpacity> 
 
-                    <View 
+                    <TouchableOpacity 
+                        // onPress={()=>navigation.navigate("Detail")}
+                        style={{
+                            height:150,
+                            elevation:2,
+                            backgroundColor:"#FFF",
+                            alignItems:'center',
+                            justifyContent:'center',
+                            marginTop:20,
+                            borderRadius:15,
+                            marginBottom:10,
+                            width:160
+                        }}
+                    >
+                        <Icon name="bell-o" size={70} color="#18b4f5" />
+                        <View style={{
+                            flexDirection:"row",
+                            paddingTop:10,
+                            paddingHorizontal:10
+                        }}>
+                            <Text style={{
+                                fontWeight:"bold"
+                            }}>Notiications</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+                <View style = {{flexDirection: 'row',justifyContent:'space-evenly'}}>
+                     <TouchableOpacity 
+                        // onPress={()=>navigation.navigate("DocProfilePanel")}
+                        style={{
+                            height:150,
+                            elevation:2,
+                            backgroundColor:"#FFF",
+                            alignItems:'center',
+                            justifyContent:'center',
+                            marginTop:20,
+                            borderRadius:15,
+                            marginBottom:10,
+                            width:160
+                        }}
+                    >
+                        <MIcon name="android-messages" size={70} color="#18b4f5" />
+                        <View style={{
+                            flexDirection:"row",
+                            paddingTop:10,
+                            paddingHorizontal:10
+                        }}>
+                            <Text style={{
+                                fontWeight:"bold"
+                            }}>Messages</Text>
+                        </View>
+                    </TouchableOpacity> 
+
+                    <TouchableOpacity 
                         // onPress={()=>navigation.navigate("Detail")}
                         style={{
                             height:150,
@@ -252,66 +301,9 @@ const HomeDoc = ({navigation}) => {
                                 fontWeight:"bold"
                             }}>Logout</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
-
                 </ScrollView>            
-
-                
-{/* 
-
-               <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center",
-                   marginTop:-80,
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61"
-                        }}>Featured Plants</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:"#b1e5d3",
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <View style={{
-                            backgroundColor:"#00a46c",
-                            paddingHorizontal:20,
-                            paddingVertical:5,
-                            borderRadius:15
-                        }}>
-                            <Text style={{
-                                fontWeight:"bold",
-                                fontSize:13,
-                                color:"#FFF"
-                            }}>More</Text>
-                        </View>
-                   </View>
-               </View>
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={{marginBottom:-100}}
-                >
-                    <Image
-                        //source={require("../images/18.png")}
-                        style={{marginTop:20,marginHorizontal:20}}
-                    />
-                     <Image
-                        //source={require("../images/19.png")}
-                        style={{marginTop:20,borderRadius:10}}
-                    />
-                </ScrollView> */}
         </View>
     )
 }
